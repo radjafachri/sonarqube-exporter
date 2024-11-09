@@ -1,4 +1,4 @@
-# Version 1.0
+# Version 1.1
 # SonarQube Prometheus Exporter
 
 This project is a Python-based Prometheus exporter that fetches metrics from SonarQube via its REST API and exposes them to Prometheus for monitoring and visualization (e.g., in Grafana). The exporter collects information about project health, total number of projects, lines of code (LOC), and user count in your SonarQube instance.
@@ -9,6 +9,8 @@ This project is a Python-based Prometheus exporter that fetches metrics from Son
 - **Total Projects**: Displays the total number of projects in SonarQube.
 - **Lines of Code (LOC)**: Provides the total lines of code across all projects and lines of code per project.
 - **User Monitoring**: Tracks the total number of users in the SonarQube instance.
+- **Computer Engine Task Metrics**: Provides key metrics for tasks performed by the computer engine.
+- **Computer Engine JVM State Metrics**: Monitors and displays the current state of the JVM used by the computer engine, including memory usage, thread counts, and other JVM-specific metrics.
 
 ## Prerequisites
 
