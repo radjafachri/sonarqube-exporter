@@ -1,8 +1,8 @@
 ##==============================================##
 ## Title    :  DevOps SonarQube Exporter        ##
 ## Author   :  Radja Fachriyanda                ##
-## Date     :  09 November 2024                 ##
-## Version  :  v1.1                             ##
+## Date     :  18 February 2025                 ##
+## Version  :  v1.2                             ##
 ##==============================================##
 
 import requests
@@ -12,11 +12,17 @@ from dotenv import load_dotenv
 import os
 
 # Load environment variables from .env into os.environ
-load_dotenv() 
+load_dotenv()
+
+# Assign environment variables to Python variables
+SONARQUBE_URL = os.getenv("SONARQUBE_URL")
+BEARER_TOKEN = os.getenv("BEARER_TOKEN")
+
+# Debug prints to check if values are loaded
+print(SONARQUBE_URL)
+print(BEARER_TOKEN)
 
 # SonarQube API URLs and token
-print(os.environ['SONARQUBE_URL'])
-print(os.environ['BEARER_TOKEN'])
 LICENSE_USAGE_ENDPOINT = "/api/projects/license_usage"
 SYSTEM_INFO_ENDPOINT = "/api/system/info"
 
